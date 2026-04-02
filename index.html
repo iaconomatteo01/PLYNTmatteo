@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLYNT — Vegan Sport Nutrition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== BANNER ===== -->
+  <div class="banner">
+    <span>🌱 Livraison offerte dès 50€</span>
+    <span>|</span>
+    <span>100% Vegan · Zéro additif · Sourcing FR</span>
+    <span>|</span>
+    <span>Paiement sécurisé 🔒</span>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="../IMAGE/LOGO2.png" alt="PLYNT Logo" class="nav-logo-img" />
+      PLYNT
+    </div>
+    <ul class="nav-links">
+      <li><a href="#produits">Produits</a></li>
+      <li><a href="#valeurs">Valeurs</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#produits" class="btn btn-outline">Commander</a>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <!-- 📸 REMPLACE src="" PAR LE CHEMIN DE TON IMAGE : ex src="img/hero.jpg" -->
+    <img src="" alt="PLYNT Hero" class="hero-img" id="hero-img" />
+    <div class="hero-overlay"></div>
+    <div class="hero-bg-text">PLYNT</div>
+    <div class="hero-content">
+      <p class="hero-label">Vegan Sport Nutrition</p>
+      <h1 class="hero-title">Fuelled by<br><span class="accent">Plants.</span><br>Built for<br>Performance.</h1>
+      <p class="hero-sub">La protéine végétale qui ne fait aucun compromis.<br>Pois · Chanvre · Riz brun — 100% naturel.</p>
+      <div class="hero-cta">
+        <a href="#produits" class="btn btn-primary">Découvrir la gamme</a>
+        <a href="#valeurs" class="btn btn-ghost">Notre histoire</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-n">25g</span>
+          <span class="stat-l">Protéines / dose</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-n">0</span>
+          <span class="stat-l">Additif artificiel</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-n">100%</span>
+          <span class="stat-l">Vegan certifié</span>
+        </div>
+      </div>
+    </div>
+    <img src="../IMAGE/photoheader.png" alt="Produit PLYNT" class="hero-product" />
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUITS ===== -->
+  <section class="section" id="produits">
+    <div class="container">
+      <p class="section-label">Gamme PLYNT</p>
+      <h2 class="section-title">Nos Produits</h2>
+
+      <!-- ── WHEY ── -->
+      <div class="product-category">
+        <div class="category-header">
+          <div class="category-line"></div>
+          <h3 class="category-title">Poudre Protéinée</h3>
+          <div class="category-line"></div>
+        </div>
+        <p class="category-sub">Mélange premium pois · chanvre · riz brun — 25g de protéines / dose · Sans additif · Sans édulcorant</p>
+
+        <div class="flavors-grid">
+
+          <!-- Nature -->
+          <div class="flavor-card">
+            <div class="flavor-badge">Nature</div>
+            <img src="../IMAGE/nature.png" alt="Poudre Nature" class="flavor-photo" />
+            <div class="flavor-info">
+              <h4 class="flavor-name">Nature</h4>
+              <p class="flavor-desc">Goût pur, sans arôme. Idéal pour intégrer dans tes recettes ou smoothies.</p>
+              <ul class="flavor-specs">
+                <li>500g · 20 doses</li>
+                <li>25g protéines / dose</li>
+                <li>Pois · Chanvre · Riz brun</li>
+              </ul>
+              <div class="flavor-footer">
+                <span class="flavor-price">34,90€</span>
+                <button class="btn btn-primary" onclick="addToCart(this, 'Poudre Nature')">Ajouter</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vanille -->
+          <div class="flavor-card">
+            <div class="flavor-badge flavor-badge--vanilla">Vanille</div>
+            <img src="../IMAGE/vanille.png" alt="Poudre Vanille" class="flavor-photo" />
+            <div class="flavor-info">
+              <h4 class="flavor-name">Vanille</h4>
+              <p class="flavor-desc">Douce et crémeuse, aromatisée à la vanille bourbon naturelle.</p>
+              <ul class="flavor-specs">
+                <li>500g · 20 doses</li>
+                <li>25g protéines / dose</li>
+                <li>Arôme vanille naturel</li>
+              </ul>
+              <div class="flavor-footer">
+                <span class="flavor-price">34,90€</span>
+                <button class="btn btn-primary" onclick="addToCart(this, 'Poudre Vanille')">Ajouter</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chocolat -->
+          <div class="flavor-card">
+            <div class="flavor-badge flavor-badge--choco">Chocolat</div>
+            <img src="../IMAGE/chocolat.png" alt="Poudre Chocolat" class="flavor-photo" />
+            <div class="flavor-info">
+              <h4 class="flavor-name">Chocolat</h4>
+              <p class="flavor-desc">Intense et gourmande, à base de cacao cru non sucré. Best-seller.</p>
+              <ul class="flavor-specs">
+                <li>500g · 20 doses</li>
+                <li>25g protéines / dose</li>
+                <li>Cacao cru 100%</li>
+              </ul>
+              <div class="flavor-footer">
+                <span class="flavor-price">34,90€</span>
+                <button class="btn btn-primary" onclick="addToCart(this, 'Poudre Chocolat')">Ajouter</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── BARRES ── -->
+      <div class="product-category">
+        <div class="category-header">
+          <div class="category-line"></div>
+          <h3 class="category-title">Barres Protéinées</h3>
+          <div class="category-line"></div>
+        </div>
+        <p class="category-sub">On-the-go · Dattes · Amandes · Protéine de pois — 20g de protéines · Zéro sucre raffiné</p>
+
+        <div class="flavors-grid flavors-grid--two">
+
+          <!-- Barre Vanille -->
+          <div class="flavor-card flavor-card--bar">
+            <div class="flavor-badge flavor-badge--vanilla">Vanille</div>
+            <img src="../IMAGE/Barre_vanille.png" alt="Barre Vanille" class="flavor-photo" />
+            <div class="flavor-info">
+              <h4 class="flavor-name">Barre Vanille</h4>
+              <p class="flavor-desc">Fondante et délicate. Dattes · Amandes · Vanille bourbon naturelle.</p>
+              <ul class="flavor-specs">
+                <li>60g / barre</li>
+                <li>20g protéines</li>
+                <li>Zéro sucre raffiné</li>
+              </ul>
+              <div class="flavor-footer">
+                <span class="flavor-price">3,90€</span>
+                <button class="btn btn-primary" onclick="addToCart(this, 'Barre Vanille')">Ajouter</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Barre Chocolat -->
+          <div class="flavor-card flavor-card--bar">
+            <div class="flavor-badge flavor-badge--choco">Chocolat</div>
+            <img src="../IMAGE/Barre_choco.png" alt="Barre Chocolat" class="flavor-photo" />
+            <div class="flavor-info">
+              <h4 class="flavor-name">Barre Chocolat</h4>
+              <p class="flavor-desc">Intense et croquante. Dattes · Amandes · Cacao cru non sucré.</p>
+              <ul class="flavor-specs">
+                <li>60g / barre</li>
+                <li>20g protéines</li>
+                <li>Cacao cru 100%</li>
+              </ul>
+              <div class="flavor-footer">
+                <span class="flavor-price">3,90€</span>
+                <button class="btn btn-primary" onclick="addToCart(this, 'Barre Chocolat')">Ajouter</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== VALEURS ===== -->
+  <section class="section section-dark" id="valeurs">
+    <div class="container">
+      <p class="section-label">Pourquoi PLYNT</p>
+      <h2 class="section-title">Nos Valeurs</h2>
+      <div class="values-grid">
+        <div class="value-card" data-aos="fade-up">
+          <div class="value-icon">🌿</div>
+          <h4>100% Naturel</h4>
+          <p>Aucun additif artificiel, aucun édulcorant. Ce que tu lis sur l'étiquette, c'est exactement ce qu'il y a dans la boîte.</p>
+        </div>
+        <div class="value-card" data-aos="fade-up" style="--delay:0.1s">
+          <div class="value-icon">⚡</div>
+          <h4>Performance Pure</h4>
+          <p>25g de protéines complètes par dose. Un profil d'acides aminés optimisé pour la récupération et la construction musculaire.</p>
+        </div>
+        <div class="value-card" data-aos="fade-up" style="--delay:0.2s">
+          <div class="value-icon">🌍</div>
+          <h4>Sourcing FR</h4>
+          <p>Nos pois et notre chanvre sont cultivés en France. Traçabilité complète, impact carbone maîtrisé.</p>
+        </div>
+        <div class="value-card" data-aos="fade-up" style="--delay:0.3s">
+          <div class="value-icon">♻️</div>
+          <h4>Emballage Responsable</h4>
+          <p>Packaging compostable et recyclable. Parce que prendre soin de toi ne doit pas se faire au détriment de la planète.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AVIS ===== -->
+  <section class="section" id="avis">
+    <div class="container">
+      <p class="section-label">Ce qu'ils disent</p>
+      <h2 class="section-title">Avis Clients</h2>
+
+      <!-- Avis statiques (BDD à connecter ultérieurement) -->
+      <div class="avis-grid" id="avis-grid">
+        <div class="avis-card">
+          <div class="avis-header">
+            <span class="avis-name">Thomas M.</span>
+            <span class="avis-produit">Poudre Protéinée</span>
+          </div>
+          <div class="avis-stars">★★★★★</div>
+          <p class="avis-text">Incroyable ! La texture est super fine et le goût chocolat est vraiment bon. Je l'utilise après chaque CrossFit.</p>
+          <span class="avis-date">12 mars 2026</span>
+        </div>
+        <div class="avis-card">
+          <div class="avis-header">
+            <span class="avis-name">Léa D.</span>
+            <span class="avis-produit">Barre Protéinée</span>
+          </div>
+          <div class="avis-stars">★★★★☆</div>
+          <p class="avis-text">Très bonne barre, naturelle et pas trop sucrée. Parfaite pour mes pauses entre les entraînements !</p>
+          <span class="avis-date">8 mars 2026</span>
+        </div>
+        <div class="avis-card">
+          <div class="avis-header">
+            <span class="avis-name">Maxime R.</span>
+            <span class="avis-produit">Poudre Protéinée</span>
+          </div>
+          <div class="avis-stars">★★★★★</div>
+          <p class="avis-text">Enfin une protéine végane qui n'a pas un goût de carton ! Le sourcing français est un vrai plus.</p>
+          <span class="avis-date">2 mars 2026</span>
+        </div>
+      </div>
+
+      <!-- Formulaire ajout avis -->
+      <div class="avis-form-section">
+        <h3>Laisser un avis</h3>
+        <form id="avis-form" class="avis-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nom">Prénom</label>
+              <input type="text" id="nom" name="nom" placeholder="Ex: Thomas" required />
+              <span class="form-error" id="err-nom"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="ton@email.com" required />
+              <span class="form-error" id="err-email"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Note</label>
+            <div class="stars-input" id="stars-input" role="group" aria-label="Note sur 5">
+              <span class="star" data-val="1">★</span>
+              <span class="star" data-val="2">★</span>
+              <span class="star" data-val="3">★</span>
+              <span class="star" data-val="4">★</span>
+              <span class="star" data-val="5">★</span>
+            </div>
+            <input type="hidden" id="note" name="note" value="0" />
+            <span class="form-error" id="err-note"></span>
+          </div>
+          <div class="form-group">
+            <label for="produit">Produit</label>
+            <select id="produit" name="produit" required>
+              <option value="">Choisir un produit</option>
+              <option value="Poudre Protéinée">Poudre Protéinée</option>
+              <option value="Barre Protéinée">Barre Protéinée</option>
+            </select>
+            <span class="form-error" id="err-produit"></span>
+          </div>
+          <div class="form-group">
+            <label for="commentaire">Commentaire</label>
+            <textarea id="commentaire" name="commentaire" rows="4" placeholder="Partagez votre expérience avec PLYNT..." required></textarea>
+            <span class="form-error" id="err-commentaire"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+            Publier mon avis
+          </button>
+          <div class="form-success" id="form-success">
+            ✅ Merci ! Votre avis a été publié avec succès.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">PLYNT</span>
+        <p>Fuelled by plants.<br>Built for performance.</p>
+        <p class="footer-tagline">© 2026 PLYNT — Tous droits réservés</p>
+      </div>
+      <div class="footer-links">
+        <h5>Produits</h5>
+        <ul>
+          <li><a href="#produits">Poudre Protéinée</a></li>
+          <li><a href="#produits">Barre Protéinée</a></li>
+          <li><a href="#produits">Pack Découverte</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Marque</h5>
+        <ul>
+          <li><a href="#valeurs">Notre histoire</a></li>
+          <li><a href="#valeurs">Nos valeurs</a></li>
+          <li><a href="#avis">Avis clients</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@plynt.fr">hello@plynt.fr</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>100% Vegan</span>
+      <span>·</span>
+      <span>Zéro additif</span>
+      <span>·</span>
+      <span>Sourcing FR</span>
+      <span>·</span>
+      <span>Emballage compostable</span>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
