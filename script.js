@@ -1,15 +1,10 @@
-/* ===========================
-   PLYNT — script.js
-   JS Dynamique & Interactivité
-=========================== */
-
-// ===== NAVBAR SCROLL =====
+// NAVBAR SCROLL
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 60);
 });
 
-// ===== BURGER MENU =====
+// BURGER MENU
 const burger = document.getElementById('burger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -29,7 +24,7 @@ burger.addEventListener('click', () => {
   }
 });
 
-// ===== TOAST NOTIFICATION =====
+//TOAST NOTIFICATION
 function showToast(msg, duration = 3000) {
   const toast = document.getElementById('toast');
   toast.textContent = msg;
@@ -37,7 +32,7 @@ function showToast(msg, duration = 3000) {
   setTimeout(() => toast.classList.remove('show'), duration);
 }
 
-// ===== ADD TO CART =====
+//ADD TO CART
 function addToCart(btn, productName) {
   const original = btn.textContent;
   btn.textContent = '✓ Ajouté !';
@@ -51,7 +46,7 @@ function addToCart(btn, productName) {
   }, 2000);
 }
 
-// ===== SCROLL ANIMATIONS =====
+//SCROLL ANIMATIONS
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -68,7 +63,7 @@ document.querySelectorAll('.value-card, .product-card').forEach(el => {
   observer.observe(el);
 });
 
-// ===== STAR RATING =====
+//STAR RATING
 const stars = document.querySelectorAll('.star');
 const noteInput = document.getElementById('note');
 let selectedNote = 0;
@@ -101,7 +96,7 @@ stars.forEach(star => {
   });
 });
 
-// ===== FORM VALIDATION & SUBMIT =====
+//FORM VALIDATION & SUBMIT
 const form = document.getElementById('avis-form');
 
 function showError(id, msg) {
@@ -205,7 +200,7 @@ form.addEventListener('submit', (e) => {
   });
 });
 
-// ----- CHARGEMENT DES AVIS DEPUIS LA BDD -----
+//CHARGEMENT DES AVIS DEPUIS LA BDD
 function loadAvis() {
   fetch('../DONNEES/get_avis.php')
     .then(res => res.json())
@@ -213,7 +208,7 @@ function loadAvis() {
       if (!data.success) return;
 
       const grid = document.getElementById('avis-grid');
-      grid.innerHTML = ''; // vide la grille
+      grid.innerHTML = '';
 
       data.avis.forEach(avis => {
         const stars = Array.from({length: 5}, (_, i) =>
