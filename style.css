@@ -1,9 +1,4 @@
-/* ===========================
-   PLYNT — style.css
-   DA: Dark Forest · Neon Green
-=========================== */
-
-/* --- RESET & BASE --- */
+/* RESET & BASE*/
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -40,7 +35,7 @@ ul { list-style: none; }
   padding: 0 24px;
 }
 
-/* --- BUTTONS --- */
+/*BUTTONS*/
 .btn {
   display: inline-flex;
   align-items: center;
@@ -91,7 +86,7 @@ ul { list-style: none; }
 
 .btn-full { width: 100%; justify-content: center; }
 
-/* --- BANNER --- */
+/*BANNER*/
 .banner {
   background: var(--forest);
   color: var(--muted);
@@ -107,7 +102,7 @@ ul { list-style: none; }
   flex-wrap: wrap;
 }
 
-/* --- NAVBAR --- */
+/*NAVBAR*/
 .navbar {
   position: sticky;
   top: 0;
@@ -187,7 +182,7 @@ ul { list-style: none; }
   transition: var(--transition);
 }
 
-/* --- HERO --- */
+/*HERO*/
 .hero {
   min-height: 70vh;
   display: flex;
@@ -204,7 +199,7 @@ ul { list-style: none; }
   height: 100%;
   object-fit: cover;
   object-position: center;
-  display: none; /* Affichée automatiquement dès qu'une src est définie (voir JS) */
+  display: none;
 }
 
 .hero-img[src]:not([src=""]) {
@@ -345,7 +340,7 @@ ul { list-style: none; }
   100% { transform: scaleY(0); transform-origin: bottom; }
 }
 
-/* --- SECTIONS --- */
+/*SECTIONS*/
 .section {
   padding: 100px 0;
 }
@@ -370,7 +365,7 @@ ul { list-style: none; }
   margin-bottom: 56px;
 }
 
-/* --- PRODUCT CATEGORIES --- */
+/*PRODUCT CATEGORIES*/
 .product-category { margin-bottom: 72px; }
 
 .category-header {
@@ -402,7 +397,7 @@ ul { list-style: none; }
   margin-bottom: 36px;
 }
 
-/* Flavor grid */
+/*Flavor grid*/
 .flavors-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -414,7 +409,7 @@ ul { list-style: none; }
   margin: 0 auto;
 }
 
-/* Flavor card */
+/*Flavor card*/
 .flavor-card {
   background: var(--offwhite);
   border: 1px solid rgba(74,140,92,0.15);
@@ -428,7 +423,7 @@ ul { list-style: none; }
   box-shadow: 0 20px 48px rgba(0,0,0,0.35), 0 0 0 1px var(--neon);
 }
 
-/* Flavor badge */
+/*Flavor badge*/
 .flavor-badge {
   position: absolute;
   top: 12px;
@@ -452,7 +447,7 @@ ul { list-style: none; }
   color: #d4956a;
 }
 
-/* Photo placeholder */
+/*Photo placeholder*/
 .photo-placeholder {
   width: 100%;
   height: 220px;
@@ -486,7 +481,7 @@ ul { list-style: none; }
   letter-spacing: 0.5px;
 }
 
-/* Flavor info */
+/*Flavor info*/
 .flavor-info {
   padding: 20px;
   background: var(--offwhite);
@@ -543,7 +538,7 @@ ul { list-style: none; }
   color: var(--deep-forest);
 }
 
-/* --- VALEURS --- */
+/*VALEURS*/
 .values-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -572,7 +567,7 @@ ul { list-style: none; }
 }
 .value-card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
-/* --- AVIS --- */
+/*AVIS*/
 .avis-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -624,7 +619,7 @@ ul { list-style: none; }
 .avis-text { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
 .avis-date { font-size: 11px; color: var(--leaf); }
 
-/* --- FORM --- */
+/*FORM*/
 .avis-form-section {
   background: var(--forest);
   border: 1px solid rgba(74,140,92,0.3);
@@ -698,7 +693,7 @@ ul { list-style: none; }
 
 .form-group option { background: var(--deep-forest); }
 
-/* Stars input */
+/*Stars input*/
 .stars-input { display: flex; gap: 6px; cursor: pointer; }
 .star {
   font-size: 28px;
@@ -778,7 +773,7 @@ ul { list-style: none; }
   flex-wrap: wrap;
 }
 
-/* --- TOAST --- */
+/*TOAST*/
 .toast {
   position: fixed;
   bottom: 32px;
@@ -801,7 +796,7 @@ ul { list-style: none; }
   opacity: 1;
 }
 
-/* --- RESPONSIVE --- */
+/*RESPONSIVE*/
 @media (max-width: 768px) {
   .navbar { padding: 14px 20px; }
   .nav-links { display: none; }
